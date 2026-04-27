@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BIG CREATOR STUDIO - UNDER $5 ROBLOX GAMES</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Playfair+Display:wght@400;700&display=swap');
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: 'Playfair Display', serif;
+            background: linear-gradient(135deg, #000 0%, #1a1a1a 50%, #2d1b00 100%);
+            color: #f0e68c;
+            overflow-x: hidden;
+        }
+
+        .container { max-width: 1200px; margin: 0 auto; padding: 20px; }
+
+        /* GOLDEN LOGO */
+        .logo {
+            font-family: 'Cinzel', serif;
+            font-size: 5rem;
+            font-weight: 900;
+            background: linear-gradient(45deg, #ffd700, #ffed4e, #d4af37);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-align: center;
+            margin: 30px 0;
+            letter-spacing: 8px;
+            text-shadow: 0 0 50px rgba(255,215,0,0.8);
+            animation: glow 2s ease-in-out infinite alternate;
+        }
+
+        @keyframes glow {
+            from { filter: drop-shadow(0 0 20px #ffd700); }
+            to { filter: drop-shadow(0 0 40px #ffd700); }
+        }
+
+        /* UNDER $5 BADGE */
+        .under5 {
+            font-family: 'Cinzel', serif;
+            font-size: 4rem;
+            font-weight: 900;
+            background: linear-gradient(45deg, #00ff88, #32cd32);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-align: center;
+            margin: 20px 0;
+            animation: pulse 1.5s infinite;
+            text-shadow: 0 0 30px rgba(0,255,136,0.8);
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+        }
+
+        .hero {
+            background: rgba(0,0,0,0.9);
+            border: 4px solid;
+            border-image: linear-gradient(45deg, #ffd700, #00ff88) 1;
+            border-radius: 25px;
+            padding: 60px;
+            margin: 30px 0;
+            text-align: center;
+            box-shadow: 0 30px 100px rgba(255,215,0,0.3);
+        }
+
+        .section-title {
+            font-family: 'Cinzel', serif;
+            font-size: 3rem;
+            background: linear-gradient(45deg, #ffd700, #00ff88);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 30px;
+        }
+
+        /* DISCORD BUTTON */
+        .discord-btn {
+            display: inline-block;
+            background: linear-gradient(45deg, #7289da, #5865f2);
+            color: white;
+            padding: 20px 50px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin: 30px 0;
+            box-shadow: 0 15px 40px rgba(114,137,218,0.5);
+            transition: all 0.3s;
+        }
+
+        .discord-btn:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 50px rgba(114,137,218,0.7);
+        }
+
+        /* FORM */
+        .form-box {
+            background: rgba(26,26,26,0.95);
+            border: 3px solid #00ff88;
+            border-radius: 20px;
+            padding: 50px;
+            margin: 40px 0;
+        }
+
+        .form-group {
+            margin-bottom: 25px;
+        }
+
+        label {
+            display: block;
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            color: #ffd700;
+            font-weight: 600;
+        }
+
+        input, textarea, select {
+            width: 100%;
+            padding: 18px;
+            border: 2px solid #444;
+            border-radius: 12px;
+            background: #333;
+            color: #f0e68c;
+            font-size: 1rem;
+            transition: all 0.3s;
+        }
+
+        input:focus, textarea:focus {
+            border-color: #00ff88;
+            box-shadow: 0 0 20px rgba(0,255,136,0.5);
+            outline: none;
+        }
+
+        .submit-btn {
+            width: 100%;
+            background: linear-gradient(45deg, #00ff88, #ffd700);
+            color: #000;
+            padding: 25px;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.8rem;
+            font-weight: 900;
+            font-family: 'Cinzel', serif;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+        }
+
+        .submit-btn:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 50px rgba(0,255,136,0.6);
+        }
+
+        .price-box {
+            background: linear-gradient(135deg, rgba(0,255,136,0.2), rgba(0,255,136,0.1));
+            border: 3px solid #00ff88;
+            border-radius: 15px;
+            padding: 30px;
+            margin: 30px 0;
+            text-align: center;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px;
+            border-top: 4px solid #ffd700;
+            color: #aaa;
+        }
+
+        @media (max-width: 768px) {
+            .logo { font-size: 3rem; }
+            .under5 { font-size: 2.5rem; }
+            .hero, .form-box { padding: 30px 20px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- BIG CREATOR STUDIO LOGO -->
+        <h1 class="logo">BIG CREATOR STUDIO</h1>
+        
+        <!-- UNDER $5 #1 -->
+        <div class="under5">UNDER $5</div>
+        <p style="font-size: 1.5rem; text-align: center; color: #f0e68c; margin-bottom: 40px;">
+            PROFESSIONAL ROBLOX GAMES - UNDER $5<br>
+            <strong>FINAL PRICE DECIDED IN DISCORD</strong>
+        </p>
+
+        <section class="hero">
+            <h2 class="section-title">🎮 BIG CREATOR STUDIO</h2>
+            
+            <!-- UNDER $5 #2 -->
+            <div class="price-box">
+                <h2 style="color: #00ff88; font-family: 'Cinzel', serif; font-size: 2.5rem;">
+                    💰 UNDER $5 GAMES
+                </h2>
+                <p style="font-size: 1.3rem; font-weight: 700;">
+                    Starting UNDER $5 - Exact price in Discord!
+                </p>
+            </div>
+
+            <!-- DISCORD REQUIRED -->
+            <div style="margin: 40px 0;">
+                <h3 style="color: #ffd700; font-family: 'Cinzel', serif; font-size: 2rem; margin-bottom: 20px;">
+                    📱 JOIN DISCORD FIRST
+                </h3>
+                <a href="https://discord.com/channels/1492834891245555763/1492835035852570666" target="_blank" class="discord-btn">
+                    🎮 JOIN BIG CREATOR STUDIO DISCORD
+                </a>
+                <p style="margin-top: 20px; font-size: 1.2rem; font-weight: 600; color: #00ff88;">
+                    <strong>MUST JOIN DISCORD → GET UNDER $5 QUOTE</strong>
+                </p>
+            </div>
+        </section>
+
+        <!-- FORM -->
+        <form class="form-box" id="form">
+            <h2 class="section-title" style="font-size: 2.5rem;">UNDER $5 GAME REQUEST</h2>
+            
+            <!-- UNDER $5 #3 -->
+            <div style="background: rgba(255,215,0,0.1); border: 2px solid #ffd700; padding: 20px; border-radius: 12px; margin-bottom: 30px;">
+                <h4 style="color: #ffd700; margin-bottom: 10px;">⚡ BIG CREATOR STUDIO PROMISE</h4>
+                <p><strong>YOUR GAME UNDER $5</strong> - Price finalized in Discord</p>
+            </div>
+
+            <div class="form-group">
+                <label>Name *</label>
+                <input type="text" name="name" required>
+            </div>
+
+            <div class="form-group">
+                <label>Email *</label>
+                <input type="email" name="email" required>
+            </div>
+
+            <div class="form-group">
+                <label>Discord Username *<br><small>Format: Username#1234</small></label>
+                <input type="text" name="discord" required>
+            </div>
+
+            <div class="form-group">
+                <label>Game Name *</label>
+                <input type="text" name="gameName" required>
+            </div>
+
+            <div class="form-group">
+                <label>Game Type *</label>
+                <select name="gameType" required>
+                    <option value="">Select...</option>
+                    <option>Obby</option>
+                    <option>Tycoon</option>
+                    <option>Simulator</option>
+                    <option>RPG</option>
+                    <option>PvP</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>Game Description *</label>
+                <textarea name="description" placeholder="Describe your game for UNDER $5..." required></textarea>
+            </div>
+
+            <!-- UNDER $5 #4 -->
+            <div style="text-align: center; color: #00ff88; font-size: 1.5rem; font-weight: 700; margin: 30px 0;">
+                🎯 FINAL PRICE UNDER $5 - DISCUSS IN DISCORD
+            </div>
+
+            <button type="submit" class="submit-btn">🚀 GET UNDER $5 GAME</button>
+        </form>
+
+        <!-- FOOTER -->
+        <footer>
+            <!-- UNDER $5 #5 -->
+            <h2 style="color: #00ff88; font-family: 'Cinzel', serif; margin-bottom: 20px;">
+                BIG CREATOR STUDIO - UNDER $5 GAMES
+            </h2>
+            <p><strong>adilmaxhar@gmail.com</strong></p>
+            <p><strong>Prices under $5 - Finalized in Discord</strong></p>
+        </footer>
+    </div>
+
+    <script>
+        document.getElementById('form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('✅ BIG CREATOR STUDIO!\n\n🎮 UNDER $5 GAME SUBMITTED\n📱 Check Discord for FINAL PRICE UNDER $5\n📧 Email confirmation sent');
+            this.reset();
+        });
+    </script>
+</body>
+</html>
