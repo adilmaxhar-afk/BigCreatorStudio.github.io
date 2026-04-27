@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roblox Game Maker - Submit Your Idea</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Playfair+Display:wght@400;500;600&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Playfair Display', serif;
+            background: linear-gradient(135deg, #1a1a1a 0%, #0d0d0d 50%, #2d1b00 100%);
+            color: #f4e4bc;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        .gold-gradient {
+            background: linear-gradient(45deg, #d4af37, #f1c40f, #b8860b, #ffd700);
+            background-size: 400% 400%;
+            animation: goldShine 3s ease-in-out infinite;
+        }
+
+        @keyframes goldShine {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            padding: 60px 0;
+            position: relative;
+        }
+
+        .logo {
+            font-family: 'Cinzel', serif;
+            font-size: 4rem;
+            font-weight: 700;
+            background: linear-gradient(45deg, #ffd700, #f1c40f, #d4af37);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-shadow: 0 0 30px rgba(255, 215, 0, 0.5);
+            margin-bottom: 20px;
+            letter-spacing: 3px;
+        }
+
+        .tagline {
+            font-size: 1.4rem;
+            color: #e6d5a8;
+            font-weight: 500;
+            margin-bottom: 40px;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.8);
+        }
+
+        .hero-section {
+            background: rgba(13, 13, 13, 0.9);
+            border: 3px solid transparent;
+            border-image: linear-gradient(45deg, #ffd700, #d4af37) 1;
+            border-radius: 20px;
+            padding: 60px;
+            margin: 40px 0;
+            box-shadow: 0 20px 60px rgba(212, 175, 55, 0.3);
+            backdrop-filter: blur(10px);
+        }
+
+        .section-title {
+            font-family: 'Cinzel', serif;
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 40px;
+            background: linear-gradient(45deg, #ffd700, #f1c40f);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .discord-join {
+            text-align: center;
+            margin: 40px 0;
+            padding: 30px;
+            background: rgba(0, 0, 0, 0.7);
+            border: 2px solid #d4af37;
+            border-radius: 15px;
+            transition: all 0.3s ease;
+        }
+
+        .discord-join:hover {
+            border-color: #ffd700;
+            box-shadow: 0 0 30px rgba(255, 215, 0, 0.4);
+        }
+
+        .discord-btn {
+            display: inline-block;
+            background: linear-gradient(45deg, #7289da, #5b6eae);
+            color: white;
+            padding: 18px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin: 20px 0;
+            box-shadow: 0 10px 30px rgba(114, 137, 218, 0.4);
+            transition: all 0.3s ease;
+        }
+
+        .discord-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(114, 137, 218, 0.6);
+        }
+
+        .form-container {
+            background: rgba(26, 26, 26, 0.95);
+            border: 2px solid #d4af37;
+            border-radius: 20px;
+            padding: 50px;
+            margin: 40px 0;
+            box-shadow: 0 15px 50px rgba(212, 175, 55, 0.2);
+        }
+
+        .form-group {
+            margin-bottom: 30px;
+        }
+
+        label {
+            display: block;
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+            color: #f4e4bc;
+            font-weight: 500;
+        }
+
+        input, textarea, select {
+            width: 100%;
+            padding: 18px;
+            border: 2px solid #4a4a4a;
+            border-radius: 12px;
+            background: rgba(74, 74, 74, 0.8);
+            color: #f4e4bc;
+            font-size: 1rem;
+            font-family: inherit;
+            transition: all 0.3s ease;
+        }
+
+        input:focus, textarea:focus, select:focus {
+            outline: none;
+            border-color: #ffd700;
+            box-shadow: 0 0 20px rgba(255, 215, 0, 0.3);
+            background: rgba(74, 74, 74, 1);
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 150px;
+        }
+
+        .submit-btn {
+            background: linear-gradient(45deg, #d4af37, #ffd700, #f1c40f);
+            color: #1a1a1a;
+            padding: 20px 50px;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.4rem;
+            font-weight: 700;
+            font-family: 'Cinzel', serif;
+            cursor: pointer;
+            width: 100%;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .submit-btn:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 50px rgba(212, 175, 55, 0.6);
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin: 60px 0;
+        }
+
+        .feature-card {
+            background: rgba(13, 13, 13, 0.8);
+            border: 2px solid transparent;
+            border-image: linear-gradient(45deg, #d4af37, #ffd700) 1;
+            border-radius: 15px;
+            padding: 40px 30px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 60px rgba(212, 175, 55, 0.4);
+        }
+
+        .feature-icon {
+            font-size: 3rem;
+            background: linear-gradient(45deg, #ffd700, #f1c40f);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 20px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px 0;
+            border-top: 2px solid #d4af37;
+            margin-top: 60px;
+            color: #b8a07e;
+        }
+
+        @media (max-width: 768px) {
+            .logo {
+                font-size: 2.5rem;
+            }
+            
+            .hero-section, .form-container {
+                padding: 30px 20px;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+        }
+
+        .required {
+            color: #ffd700;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1 class="logo">Roblox Game Forge</h1>
+            <p class="tagline">Turn Your Dreams into Digital Reality</p>
+        </header>
+
+        <section class="hero-section">
+            <h2 class="section-title">🎮 Submit Your Game Idea</h2>
+            
+            <div class="discord-join">
+                <h3 style="color: #ffd700; margin-bottom: 20px; font-family: 'Cinzel', serif;">
+                    Step 1: Join Our Discord First
+                </h3>
+                <a href="https://discord.com/channels/1492834891245555763/1492835035852570666" target="_blank" class="discord-btn">
+                    🚀 Join Discord Channel
+                </a>
+                <p style="margin-top: 15px; font-size: 1.1rem;">
+                    You MUST join our Discord before submitting. This ensures we can discuss your idea!
+                </p>
+            </div>
+
+            <form class="form-container" id="gameIdeaForm">
+                <h3 class="section-title" style="margin-bottom: 30px;">Game Idea Submission</h3>
+                
+                <div class="form-group">
+                    <label for="name">Your Name <span class="required">*</span></label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Address <span class="required">*</span></label>
+                    <input type="email" id="email" name="email" placeholder="your@email.com" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="discord">Discord Username <span class="required">*</span></label>
+                    <input type="text" id="discord" name="discord" placeholder="Username#1234" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="gameName">Game Name <span class="required">*</span></label>
+                    <input type="text" id="gameName" name="gameName" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="gameType">Game Genre/Type <span class="required">*</span></label>
+                    <select id="gameType" name="gameType" required>
+                        <option value="">Select a genre...</option>
+                        <option value="obby">Obby/Obstacle Course</option>
+                        <option value="tycoon">Tycoon</option>
+                        <option value="simulator">Simulator</option>
+                        <option value="rpg">RPG/Adventure</option>
+                        <option value="battle">Battle/PvP</option>
+                        <option value="horror">Horror</option>
+                        <option value="racing">Racing</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="description">Detailed Game Description <span class="required">*</span></label>
+                    <textarea id="description" name="description" placeholder="Describe your game idea in detail... What makes it unique? What are the main features? Target audience? Any specific mechanics?" required></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="features">Special Features/Monetization Ideas</label>
+                    <textarea id="features" name="features" placeholder="Gamepasses, developer products, unique mechanics, etc..."></textarea>
+                </div>
+
+                <button type="submit" class="submit-btn">✨ Submit Your Game Idea ✨</button>
+            </form>
+        </section>
+
+        <section class="features">
+            <div class="feature-card">
+                <div class="feature-icon">⚒️</div>
+                <h3 style="color: #ffd700; margin-bottom: 15px; font-family: 'Cinzel', serif;">Professional Development</h3>
+                <p>I'll build your game to the highest Roblox standards with clean, optimized code.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🎨</div>
+                <h3 style="color: #ffd700; margin-bottom: 15px; font-family: 'Cinzel', serif;">Custom Design</h3>
+                <p>Beautiful UI, polished models, and immersive environments tailored to your vision.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">📈</div>
+                <h3 style="color: #ffd700; margin-bottom: 15px; font-family: 'Cinzel', serif;">Monetization Ready</h3>
+                <p>Gamepasses, developer products, and revenue systems built-in from day one.</p>
+            </div>
+        </section>
+
+        <footer>
+            <p>&copy; 2024 Roblox Game Forge. All ideas become reality. Contact: <strong>adilmaxhar@gmail.com</strong></p>
+        </footer>
+    </div>
+
+    <script>
+        document.getElementById('gameIdeaForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Simple client-side validation
+            const discord = document.getElementById('discord').value;
+            const email = document.getElementById('email').value;
+            
+            if (!discord.includes('#')) {
+                alert('Please enter your Discord username with discriminator (e.g., Username#1234)');
+                return;
+            }
+            
+            // Here you would typically send the form data to your backend
+            // For now, we'll just show a success message
+            alert('🎉 Thank you for your submission! I will review your idea on Discord shortly. Make sure you joined the Discord channel first!');
+            
+            // Reset form
+            this.reset();
+        });
+
+        // Add some sparkle effect
+        document.addEventListener('mousemove', function(e) {
+            const sparkle = document.createElement('div');
+            sparkle.style.position = 'fixed';
+            sparkle.style.left = e.clientX + 'px';
+            sparkle.style.top = e.clientY + 'px';
+            sparkle.style.width = '4px';
+            sparkle.style.height = '4px';
+            sparkle.style.background = 'radial-gradient(circle, #ffd700, transparent)';
+            sparkle.style.borderRadius = '50%';
+            sparkle.style.pointerEvents = 'none';
+            sparkle.style.zIndex = '9999';
+            sparkle.style.animation = 'sparkle 1s ease-out forwards';
+            document.body.appendChild(sparkle);
+            
+            setTimeout(() => sparkle.remove(), 1000);
+        });
+
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes sparkle {
+                0% { transform: scale(0) rotate(0deg); opacity: 1; }
+                100% { transform: scale(1) rotate(180deg); opacity: 0; }
+            }
+        `;
+        document.head.appendChild(style);
+    </script>
+</body>
+</html>
